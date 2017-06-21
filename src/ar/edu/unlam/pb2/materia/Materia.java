@@ -30,8 +30,7 @@ public class Materia {
 			this.miMateria = miMateria;
 		}
 		
-		//metodos
-		
+		//metodos para evaluar		
 		public void evaluar(Integer numeroParcial, Integer nota) throws Exception
 		{
 			if (numeroParcial==1)
