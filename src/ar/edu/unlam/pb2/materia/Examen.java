@@ -7,13 +7,11 @@ public class Examen {
 	
 	
 	//constructor
-	public Examen (Integer nota, Integer numeroParcial)
+	public Examen (Integer numeroParcial)
 	{
-		this.nota = nota;
-		this.numeroParcial =numeroParcial;
+		this.numeroParcial = numeroParcial;
 	}
 
-	
 	// getters y setters
 	public Integer getNota() {
 		return nota;
@@ -33,16 +31,38 @@ public class Examen {
 
 
 	//metodos
-	public Integer calificarNota(Integer nota) throws Exception
-	{
-		if (nota>=1 && nota<=10)
+//	public Integer calificarNota(Integer nota) 
+//	{
+//		
+//		if (nota>=1 && nota<=10)
+//		{
+//			try
+//			{
+//			return nota;
+//			}
+//	
+//		
+//		
+//			catch (Exception e) {
+//				System.out.println("El valor debe ser entre 1 y 10");
+//			}
+//		}
+//			else
+//			{
+//				System.out.println("El valor debe ser entre 1 y 10");
+//				return 0;
+//	    	}
+
+		
+		public Integer calificarNota(Integer nota) 
 		{
-			return nota;
+			if (nota>=1 && nota<=10) {
+				return nota;
+			}
+			
+			else {
+				System.out.println("El valor de la nota debe ser entre 1 y 10");
+				return 0;
+		    }
 		}
-		else
-		{
-			throw new Exception ("No se admite");
-		}
-	}
-	
 }
