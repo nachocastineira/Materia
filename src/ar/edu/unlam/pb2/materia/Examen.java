@@ -31,38 +31,41 @@ public class Examen {
 
 
 	//metodos
-//	public Integer calificarNota(Integer nota) 
-//	{
-//		
-//		if (nota>=1 && nota<=10)
+	
+//		public Integer calificarNota(Integer nota) 
 //		{
-//			try
-//			{
-//			return nota;
+//			if (nota>=1 && nota<=10) {
+//				return nota;
 //			}
-//	
-//		
-//		
-//			catch (Exception e) {
-//				System.out.println("El valor debe ser entre 1 y 10");
-//			}
-//		}
-//			else
-//			{
-//				System.out.println("El valor debe ser entre 1 y 10");
+//			
+//			else {
+//
+//				System.out.println("El valor de la nota debe ser entre 1 y 10");
 //				return 0;
-//	    	}
-
-		
-		public Integer calificarNota(Integer nota) 
-		{
-			if (nota>=1 && nota<=10) {
-				return nota;
+//		    }
+//		}
+	
+	
+	public Integer calificarNota(Integer nota) 
+	{
+		if (nota>=1 && nota<=10) {
+			
+			try
+			{
+			return nota;
 			}
 			
-			else {
-				System.out.println("El valor de la nota debe ser entre 1 y 10");
+			catch (Exception e)
+			{
+				System.out.println("No se puede asigna la nota");
 				return 0;
-		    }
+			}
 		}
+		
+		else
+		{
+		System.out.println("El valor de la nota debe ser entre 1 y 10");
+		return 0;
+		}
+	}
 }

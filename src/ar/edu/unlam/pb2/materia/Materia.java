@@ -6,9 +6,9 @@ public class Materia {
 		private Examen examen1;
 		private Examen examen2;
 		
-		public Materia (String nombreMateria,  Integer numeroParcial)
+		public Materia (String nombreMaterial)
 		{
-			this.examen1 = new Examen( null);
+			this.examen1 = new Examen(null);
 			this.examen2 = new Examen(null);
 		}
 
@@ -40,27 +40,8 @@ public class Materia {
 
 
 		//metodos para evaluar		
-//		public void evaluar(Integer numeroParcial, Integer nota) throws Exception
-//		{
-//			if (numeroParcial==1)
-//			{
-//				examen1.calificarNota(nota);
-//			}
-//			else {
-//				throw new Exception ("No pertenece");
-//			}
-//			
-//			if (numeroParcial==2)
-//			{
-//				examen2.calificarNota(nota);
-//			}
-//			else {
-//				throw new Exception ("No pertenece");
-//			}
-//		}
-//	}
 		
-		public void evaluar(Integer numeroParcial, Integer nota) 
+		public void evaluar(Integer numeroParcial, Integer nota)  throws Exception
 		{
 			if (examen1.getNumeroParcial()==1)
 			{
@@ -68,7 +49,7 @@ public class Materia {
 			}
 			
 			else {
-				System.out.println("ERROR: La nota asignada no pertenece al examen 1");				
+				throw new Exception ("No puede asignar la nota a ese parcial");						
 			       }
 			
 			if (examen2.getNumeroParcial()==2)
@@ -76,8 +57,8 @@ public class Materia {
 				examen2.calificarNota(nota);
 			}
 			else {
-				System.out.println("ERROR: La nota asignada no pertenece al examen 2");
-			}
+				throw new Exception ("No puede asignar la nota a ese parcial");
+				   }
 		}
 	}
 		
