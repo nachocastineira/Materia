@@ -6,10 +6,11 @@ public class Materia {
 		private Examen examen1;
 		private Examen examen2;
 		
-		public Materia (String nombreMaterial)
+		public Materia (String nombreMateria)
 		{
-			this.examen1 = new Examen(null);
-			this.examen2 = new Examen(null);
+			this.examen1 = new Examen(0);
+			this.examen2 = new Examen(0);
+			this.nombreMateria = nombreMateria;
 		}
 
 		
